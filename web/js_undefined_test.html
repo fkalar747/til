@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript while</h2>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+
+/* this will cause error 
+if(nonvar){ 
+
+}
+*/
+
+var nonvar;
+
+if(nonvar){
+	console.log("t1");
+}else{
+	console.log("f1");
+}
+
+var a = {};
+a.b = null;
+
+if(a.v1){
+	console.log("t2");
+}else{
+	console.log("f2");
+}
+
+
+for(var b in a){
+	console.log(b);
+}
+
+delete a.b;
+console.log("new1");
+for(var b in a){
+	console.log(b);
+}
+
+console.log(a.v1);
+
+/* this will cause error
+console.log(v1);
+*/
+</script>
+
+</body>
+</html>
